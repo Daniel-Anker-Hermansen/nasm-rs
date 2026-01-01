@@ -5971,6 +5971,9 @@ VMOVD             xmmrm32,xmmreg                      [mr:t1s: evex.128.66.0f.w0
 VMOVW             xmmreg,xmmrm16                      [rm:t1s: evex.128.f3.map5.w0 6e /r ]      AVX10_2
 VMOVW             xmmrm16,xmmreg                      [mr:t1s: evex.128.f3.map5.w0 7e /r ]      AVX10_2
 
+;# x86rs extensions
+$dq WRCR imm8,reg# [im: 3f /0 ib] X86_64,LONG
+$dq SWI4 rm# [m: 3f /1] X86_64,LONG
 
 ;# Systematic names for the hinting nop instructions
 ; These should be last in the file
